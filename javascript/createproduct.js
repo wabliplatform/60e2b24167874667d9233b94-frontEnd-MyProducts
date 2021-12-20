@@ -1,0 +1,3 @@
+let apiProductApi = new TempApi.ProductApi();import TempApi from '../src/index';let product = new TempApi.Product();document.getElementById('i5t36').onclick = (event) => {
+    event.preventDefault();
+    product['image'] = document.querySelector("[annotationname = 'image']").value;product['title'] = document.querySelector("[annotationname = 'title']").value;product['price'] = document.querySelector("[annotationname = 'price']").value;apiProductApi.createproduct( product, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); }});};
